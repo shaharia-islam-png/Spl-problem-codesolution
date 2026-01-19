@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int N, M, t;
+    scanf("%d", &t);
+    for(int i = 1; i <= t; i++) {
+        scanf("%d %d", &N, &M);
+        int sum = 0;
+        if(N <= M) {
+            for(int j = N + 1; j < M; j++) {
+                if(j % 2 != 0)
+                    sum =sum+ j;
+            }
+        }
+        else{
+            for(int j = M + 1; j < N; j++) {
+                if(j % 2 != 0)
+                    sum =sum+ j;
+            }
+        }
+        printf("%d\n", sum);
+    }
+}

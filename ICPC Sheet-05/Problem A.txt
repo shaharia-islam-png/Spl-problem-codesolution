@@ -1,0 +1,11 @@
+#include<stdio.h>
+int mYsum(int a, int b){
+   int sum = a+b;
+   return sum;
+}
+int main(){
+   int a,b,sum;
+   scanf("%d %d",&a,&b);
+   int x = mYsum(a,b);
+   printf("%d",x);
+}

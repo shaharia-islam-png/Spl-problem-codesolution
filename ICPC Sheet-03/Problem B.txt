@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    long long n;
+    scanf("%lld", &n);
+    long long arr[n];
+    for(long long i = 0; i < n; i++) {
+        scanf("%lld", &arr[i]);
+    }
+
+    long long x;
+    scanf("%lld", &x);
+
+    long long pos = -1;
+
+    for(long long i = 0; i < n; i++) {
+        if(arr[i] == x) {
+            pos = i;
+            break;
+        }
+    }
+
+    printf("%lld\n", pos);
+
+    return 0;
+}

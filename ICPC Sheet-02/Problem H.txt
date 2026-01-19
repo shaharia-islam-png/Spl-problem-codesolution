@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int X, i, count = 0;
+    scanf("%d", &X);
+    if (X == 1) {
+        printf("NO\n");
+    }
+    for (i = 1; i <= X; i++) {
+        if (X % i == 0) {
+         count++;
+        }
+    }
+    if (count == 2){
+        printf("YES\n");
+    }
+    else{
+        printf("NO\n");
+    }
+}

@@ -1,0 +1,29 @@
+#include<stdio.h>
+int conca(int s, int a[], int b[]){
+  for(int i = 1; i<=s; i++){
+    printf("%d ",b[i]);
+}
+for(int i = 1; i<=s; i++){
+    printf("%d",a[i]);
+    if(i<s){
+        printf(" ");
+    }
+}
+return 0;
+
+}
+int main(){
+int s;
+scanf("%d",&s);
+int a[s+5],b[s+5];
+for(int i = 1; i<=s; i++){
+    scanf("%d",&a[i]);
+}
+for(int i = 1; i<=s; i++){
+    scanf("%d",&b[i]);
+}
+conca(s,a,b);
+
+
+}
+

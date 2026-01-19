@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main(){
+int n,x,t;
+scanf("%d",&t);
+for(int k=1;k<=t;k++){
+    scanf("%d",&n);
+    int a[n+5];
+    for(int i=1;i<=n;i++){
+        scanf("%d",&a[i]);
+    }
+    int mn = 10000000;
+    for(int i=1;i<n;i++){
+        for(int j=i+1;j<=n;j++){
+            int res = a[i]+a[j]+j-i;
+            if(mn>res){
+                mn=res;
+            }
+        }
+    }
+    printf("%d\n",mn);
+}
+
+
+
+}

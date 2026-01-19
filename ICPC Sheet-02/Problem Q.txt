@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int T;
+    scanf("%d", &T);
+    for (int i = 0; i < T; i++) {
+        long long N;
+        scanf("%lld", &N);
+        if (N == 0){
+            printf("0");
+        }
+        else{
+            for (long long j = N; j > 0; j = j / 10) {
+                printf("%lld ", j % 10);
+            }
+        }
+        printf("\n");
+    }
+}

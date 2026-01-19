@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int n, a,b;
+    scanf("%d %d %d", &n,&a, &b);
+    int total = 0;
+    for(int i = 1;i <= n;i++) {
+        int n = i;
+        int digit= 0;
+        for(int j = n;j > 0; j = j / 10) {
+            digit = digit+(j % 10);
+        }
+        if(digit >= a && digit<= b){
+            total =total +i;
+        }
+    }
+
+    printf("%d\n", total);
+}

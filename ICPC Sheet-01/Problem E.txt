@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+  double r, area, pi;
+  pi =  3.141592653;
+  scanf("%lf", &r);
+  area = pi * r * r;
+  printf("%lf", area);
+
+
+}

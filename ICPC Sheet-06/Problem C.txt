@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+    long long A, B;
+    scanf("%lld %lld", &A, &B);
+    if (A > B) {
+        long long t = A;
+        A = B;
+        B = t;
+    }
+    long long sumAll = B*(B+1)/2 - (A-1)*A/2;
+    long long firstEven;
+    if (A % 2 == 0)
+        firstEven = A;
+    else
+        firstEven = A + 1;
+
+    long long lastEven;
+    if (B % 2 == 0)
+        lastEven = B;
+    else
+        lastEven = B - 1;
+
+    long long sumEven = 0;
+    if (firstEven <= lastEven) {
+        long long countEven = (lastEven - firstEven) / 2 + 1;
+        sumEven = (firstEven + lastEven) * countEven / 2;
+    }
+    long long sumOdd = sumAll - sumEven;
+
+    printf("%lld\n%lld\n%lld\n", sumAll, sumEven, sumOdd);
+
+}
