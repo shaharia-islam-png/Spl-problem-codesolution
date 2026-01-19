@@ -1,0 +1,22 @@
+#include <stdio.h>
+long long findmax(long long arr[], int n) {
+    if (n == 1)
+        return arr[0];
+    long long max_rest = findmax(arr, n - 1);
+    if (arr[n - 1] > max_rest)
+        return arr[n - 1];
+    else
+        return max_rest;
+}
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    long long A[N];
+    for (int i = 0; i < N; i++)
+        scanf("%lld", &A[i]);
+    printf("%lld\n", findmax(A, N));
+
+    return 0;
+}

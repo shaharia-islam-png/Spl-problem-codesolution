@@ -1,0 +1,15 @@
+#include<stdio.h>
+int loop(int i, int x){
+  if(i<=x){
+    printf("%d\n",i);
+    loop(i+1,x);
+  }
+  return 0;
+}
+
+
+int main(){
+ int x;
+ scanf("%d",&x);
+ loop(1,x);
+}

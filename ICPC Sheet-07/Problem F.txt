@@ -1,0 +1,22 @@
+#include <stdio.h>
+int printEvenReversed(int arr[], int n) {
+    if (n < 0)
+        return 0;
+
+    if (n % 2 == 0)
+        printf("%d ", arr[n]);
+
+    printEvenReversed(arr, n - 1);
+}
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    int A[N];
+    for (int i = 0; i < N; i++)
+        scanf("%d", &A[i]);
+
+    printEvenReversed(A, N-1);
+    printf("\n");
+}

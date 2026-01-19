@@ -1,0 +1,18 @@
+#include<stdio.h>
+long long int fact( int i, int n, long long int ans1){
+  if(i<=n){
+    ans1 = ans1 * i;
+    fact(i+1,n,ans1);
+  }
+  else{
+    printf("%lld",ans1);
+  }
+
+}
+int main(){
+ int n;
+ scanf("%d",&n);
+ long long int ans1=1;
+ fact(1,n,ans1);
+
+}
