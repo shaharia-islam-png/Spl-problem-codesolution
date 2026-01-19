@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main() {
+    int t,a, b, c,small, mid, big;
+    scanf("%d", &t);
+    for (int i = 1; i <= t; i++){
+        scanf("%d %d %d", &a, &b, &c);
+        if (a < b && a < c) {
+                small = a;
+        }
+        else if (b < a && b < c) {
+                small = b;
+        }
+        else {
+                small = c;
+        }
+        if (a > b && a > c) {
+                big = a;
+        }
+        else if (b > a && b > c) {
+                big = b;
+        }
+        else {
+                big = c;
+        }
+        mid = a + b + c - (small + big);
+
+        printf("Case %d: %d %d %d\n", i, small, mid, big);
+    }
+}
